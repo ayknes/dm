@@ -37,7 +37,6 @@ L'annotation @Autowired de Spring permet d'automatiser l'injection de dépendanc
 ### Etape 30
 J'ai obtenu les liens CDN vers des feuilles de styles distantes ainsi que d'autres scripts depuis la page officielle de Bootstrap et je les ai inclu dans les pages où je veux appliquer Bootstrap
 
-# TP 3 - Aymane OUHADI (partie 2)
 
 ### Questions Etape 6
 * La clé API est importante pour appeler MeteoConcept API et la raison principale pour laquelle les API nécessitent une clé API est pour des raisons de sécurité et la protection de l'API
