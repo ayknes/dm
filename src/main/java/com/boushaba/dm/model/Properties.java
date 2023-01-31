@@ -1,159 +1,228 @@
 package com.boushaba.dm.model;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import javax.annotation.processing.Generated;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+        "label",
+        "score",
+        "id",
+        "type",
+        "name",
+        "postcode",
+        "citycode",
+        "x",
+        "y",
+        "population",
+        "city",
+        "context",
+        "importance",
+        "municipality",
+        "street"
+})
+@Generated("jsonschema2pojo")
 public class Properties {
+
+    @JsonProperty("label")
+    private String label;
+    @JsonProperty("score")
+    private Double score;
+    @JsonProperty("id")
+    private String id;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("name")
+    private String name;
+    @JsonProperty("postcode")
+    private String postcode;
+    @JsonProperty("citycode")
+    private String citycode;
+    @JsonProperty("x")
+    private Double x;
+    @JsonProperty("y")
+    private Double y;
+    @JsonProperty("population")
+    private Integer population;
+    @JsonProperty("city")
+    private String city;
+    @JsonProperty("context")
+    private String context;
+    @JsonProperty("importance")
+    private Double importance;
+    @JsonProperty("municipality")
+    private String municipality;
+    @JsonProperty("street")
+    private String street;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
+
     @JsonProperty("label")
     public String getLabel() {
-        return this.label;
+        return label;
     }
 
+    @JsonProperty("label")
     public void setLabel(String label) {
         this.label = label;
     }
 
-    String label;
-
     @JsonProperty("score")
-    public double getScore() {
-        return this.score;
+    public Double getScore() {
+        return score;
     }
 
-    public void setScore(double score) {
+    @JsonProperty("score")
+    public void setScore(Double score) {
         this.score = score;
     }
 
-    double score;
-
-    @JsonProperty("housenumber")
-    public String getHousenumber() {
-        return this.housenumber;
-    }
-
-    public void setHousenumber(String housenumber) {
-        this.housenumber = housenumber;
-    }
-
-    String housenumber;
-
     @JsonProperty("id")
     public String getId() {
-        return this.id;
+        return id;
     }
 
+    @JsonProperty("id")
     public void setId(String id) {
         this.id = id;
     }
 
-    String id;
-
     @JsonProperty("type")
     public String getType() {
-        return this.type;
+        return type;
     }
 
+    @JsonProperty("type")
     public void setType(String type) {
         this.type = type;
     }
 
-    String type;
-
     @JsonProperty("name")
     public String getName() {
-        return this.name;
+        return name;
     }
 
+    @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
     }
 
-    String name;
-
     @JsonProperty("postcode")
     public String getPostcode() {
-        return this.postcode;
+        return postcode;
     }
 
+    @JsonProperty("postcode")
     public void setPostcode(String postcode) {
         this.postcode = postcode;
     }
 
-    String postcode;
-
     @JsonProperty("citycode")
     public String getCitycode() {
-        return this.citycode;
+        return citycode;
     }
 
+    @JsonProperty("citycode")
     public void setCitycode(String citycode) {
         this.citycode = citycode;
     }
 
-    String citycode;
-
     @JsonProperty("x")
-    public double getX() {
-        return this.x;
+    public Double getX() {
+        return x;
     }
 
-    public void setX(double x) {
+    @JsonProperty("x")
+    public void setX(Double x) {
         this.x = x;
     }
 
-    double x;
-
     @JsonProperty("y")
-    public double getY() {
-        return this.y;
+    public Double getY() {
+        return y;
     }
 
-    public void setY(double y) {
+    @JsonProperty("y")
+    public void setY(Double y) {
         this.y = y;
     }
 
-    double y;
+    @JsonProperty("population")
+    public Integer getPopulation() {
+        return population;
+    }
+
+    @JsonProperty("population")
+    public void setPopulation(Integer population) {
+        this.population = population;
+    }
 
     @JsonProperty("city")
     public String getCity() {
-        return this.city;
+        return city;
     }
 
+    @JsonProperty("city")
     public void setCity(String city) {
         this.city = city;
     }
 
-    String city;
-
     @JsonProperty("context")
     public String getContext() {
-        return this.context;
+        return context;
     }
 
+    @JsonProperty("context")
     public void setContext(String context) {
         this.context = context;
     }
 
-    String context;
-
     @JsonProperty("importance")
-    public double getImportance() {
-        return this.importance;
+    public Double getImportance() {
+        return importance;
     }
 
-    public void setImportance(double importance) {
+    @JsonProperty("importance")
+    public void setImportance(Double importance) {
         this.importance = importance;
     }
 
-    double importance;
+    @JsonProperty("municipality")
+    public String getMunicipality() {
+        return municipality;
+    }
+
+    @JsonProperty("municipality")
+    public void setMunicipality(String municipality) {
+        this.municipality = municipality;
+    }
 
     @JsonProperty("street")
     public String getStreet() {
-        return this.street;
+        return street;
     }
 
+    @JsonProperty("street")
     public void setStreet(String street) {
         this.street = street;
     }
 
-    String street;
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
 }

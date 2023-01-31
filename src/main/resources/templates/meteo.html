@@ -2,10 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather Forecast</title>
 </head>
 <body>
-<header th:insert="navbar :: navbar"></header>
-<p th:text="${result}"></p>
+<h1 th:text="'Weather Forecast for ' + ${address}"></h1>
+<p>Longitude: <span th:text="${longitude}"></span></p>
+<p>Latitude: <span th:text="${latitude}"></span></p>
+<h2>Today's Forecast</h2>
+<p>Wind: <span th:text="${wind}"></span></p>
+<p>Rain: <span th:text="${rain}"></span></p>
+<p>Minimum Temperature: <span th:text="${tmin}"></span></p>
+<p>Maximum Temperature: <span th:text="${tmax}"></span></p>
+<p>Sun Hours: <span th:text="${sun_hours}"></span></p>
 </body>
 </html>

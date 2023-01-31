@@ -1,7 +1,6 @@
 package com.boushaba.dm.model;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -14,37 +13,50 @@ import javax.annotation.processing.Generated;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "type",
-        "coordinates"
+        "city",
+        "update",
+        "forecast"
 })
 @Generated("jsonschema2pojo")
-public class Geometry {
+public class Example {
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("coordinates")
-    private List<Double> coordinates;
+    @JsonProperty("city")
+    private NewCity city;
+    @JsonProperty("update")
+    private String update;
+    @JsonProperty("forecast")
+    private Forecast forecast;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
+    @JsonProperty("city")
+    public NewCity getCity() {
+        return city;
     }
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
+    @JsonProperty("city")
+    public void setCity(NewCity city) {
+        this.city = city;
     }
 
-    @JsonProperty("coordinates")
-    public List<Double> getCoordinates() {
-        return coordinates;
+    @JsonProperty("update")
+    public String getUpdate() {
+        return update;
     }
 
-    @JsonProperty("coordinates")
-    public void setCoordinates(List<Double> coordinates) {
-        this.coordinates = coordinates;
+    @JsonProperty("update")
+    public void setUpdate(String update) {
+        this.update = update;
+    }
+
+    @JsonProperty("forecast")
+    public Forecast getForecast() {
+        return forecast;
+    }
+
+    @JsonProperty("forecast")
+    public void setForecast(Forecast forecast) {
+        this.forecast = forecast;
     }
 
     @JsonAnyGetter
@@ -56,5 +68,4 @@ public class Geometry {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }
